@@ -23,10 +23,15 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
 export class EventThumbnailComponent {
     @Input() event:any
     @Output() eventClick = new EventEmitter()
+    someProperty:any = "This is in Child Component"
 
     handleClickMe() {
-        // console.log('clicked:')
-        this.eventClick.emit(this.event.name)
+        console.log('clicked:')
+        // this.eventClick.emit(this.event.name)
+    }
+
+    logFoo() {
+        console.log('foo')
     }
 
 }
